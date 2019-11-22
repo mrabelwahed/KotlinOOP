@@ -3,6 +3,8 @@ package com.ramadan.kotlinoop
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.ramadan.kotlinoop.kotlin.Book
+import com.ramadan.kotlinoop.kotlin.Circle
+import com.ramadan.kotlinoop.kotlin.Shape
 import com.ramadan.kotlinoop.kotlin.Student
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +34,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        //smart casting
+
+        val shape = Shape()
+
+        if (shape is Circle){
+            shape.calcArea()
+        }
+
+
+        //explicit casting
+
+        val anotherShape = Shape()
+
+        val circle = anotherShape  as?  Circle
+        circle?.calcArea()
 
 
     }
